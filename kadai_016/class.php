@@ -12,6 +12,13 @@
              // プロパティを定義する                        
             private $name;
             private $price;
+             // メソッドを定義する
+            public function show_price(string $price) {
+                $this->price = $price;
+            }
+            public function show_name() {
+                echo $this->name . '<br>';
+            }
              // コンストラクタを定義する
             public function __construct(string $name, int $price) {
                 $this->name = $name;
@@ -32,6 +39,10 @@
             private $name;
             private $height;
             private $weight;
+            // メソッドを定義する
+            public function show_height(string $height) {
+                $this->height = $height;
+            }
              // コンストラクタを定義する
             public function __construct(string $name, int $height, int $weight) {
                 $this->name = $name;
@@ -43,8 +54,9 @@
         $animal = new Animal('dog', 60, 5000 );
          // インスタンス$animalの各プロパティの値を出力する
         print_r($animal);
+        
         ?>
     </p>
-
 </body>
 </html>
+
