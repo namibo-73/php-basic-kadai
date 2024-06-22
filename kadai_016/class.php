@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>PHP基礎編</title>
+    <title>PHP課題</title>
 </head>
 <body>
 <p>
@@ -13,11 +13,9 @@
             private $name;
             private $price;
              // メソッドを定義する
-            public function show_price(string $price) {
-                $this->price = $price;
-            }
-            public function show_name() {
-                echo $this->name . '<br>';
+            public function show_price() {
+                $this->price = 250;
+                echo $this->price . '<br>';
             }
              // コンストラクタを定義する
             public function __construct(string $name, int $price) {
@@ -29,6 +27,7 @@
         $food = new Food('potato', 250 );
          // インスタンス$foodの各プロパティの値を出力する
         print_r($food);
+        echo '<br>';
         ?>
     </p>
     <p>
@@ -40,8 +39,9 @@
             private $height;
             private $weight;
             // メソッドを定義する
-            public function show_height(string $height) {
-                $this->height = $height;
+            public function show_height() {
+                $this->height = 60;
+                echo $this->height . '<br>';
             }
              // コンストラクタを定義する
             public function __construct(string $name, int $height, int $weight) {
@@ -54,9 +54,10 @@
         $animal = new Animal('dog', 60, 5000 );
          // インスタンス$animalの各プロパティの値を出力する
         print_r($animal);
-        
+        echo '<br>';
+        $food->show_price();
+        $animal->show_height();
         ?>
     </p>
 </body>
 </html>
-
